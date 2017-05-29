@@ -1,0 +1,90 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <input type="text" id="search" class="form-control" name="username" placeholder="Enter Github username ..." [(ngModel)]="username"
+          (keyup)="searchUser()">
+      </div>
+    </div>
+  </div>
+  <div *ngIf="userProfile">
+    <div class="row">
+      <div class="col-md-12">
+
+
+        <div class="card">
+          <!-- Default panel contents -->
+          <div class="card-header">
+            <h3>GitHub Details</h3>
+
+          </div>
+
+
+
+
+
+
+          <div class="card-block">
+            <h4 class="card-title">{{userProfile.name}} </h4>
+            <div class="row">
+              <div class="col-md-4">
+                <img class="profile-img img-thumbnail" src="{{userProfile.avatar_url}}">
+                <a class="btn btn-default btn-block" href="{{userProfile.html_url}}" target="_blank">View Profile</a>
+              </div>
+              <div class="col-md-8">
+                <div class="well well-sm">
+
+                  <span class="badge badge-default">{{userProfile.public_repos}} Public Repos</span>
+                  <span class="badge badge-success">{{userProfile.public_gists}} Public Gists</span>
+                  <span class="badge badge-info">{{userProfile.followers}} Followers</span>
+                  <span class="badge badge-warning">{{userProfile.following}} Following</span>
+                </div>
+                <br>
+                <ul class="list-group">
+                  <li class="list-group-item "><strong>Username: </strong>{{userProfile.login}}</li>
+                  <li class="list-group-item "><strong>Location: </strong>{{userProfile.location}}</li>
+                  <li class="list-group-item "><strong>Email: </strong>{{userProfile.email}}</li>
+                  <li class="list-group-item "><strong>Blog: </strong>{{userProfile.blog}}</li>
+                  <li class="list-group-item "><strong>Member Since: </strong>{{userProfile.created_at|date}}</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <!-- Repo starts  -->
+ <hr>
+    <div class="row" *ngIf="repos">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+                 <h3> GitHub repos list  </h3>
+              </div>
+        <div class="card-block">
+          <div *ngFor="let repo of repos">
+            <div class="card-block">
+              <div class="row">
+                <div class="col-md-9">
+                  <h4> <a href="{{repo.html_url}}" target="_blank">{{repo.name}} </a> </h4>
+                  <p> {{repo.description}}</p>
+                </div>
+                <div class="col-md-3">
+                  <span class="badge badge-info">{{repo.watchers}} Watchers</span>
+                  <span class="badge badge-success">{{repo.forks}} Forks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Repo Ends  -->
+  </div>
+</div>
