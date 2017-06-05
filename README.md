@@ -1,7 +1,13 @@
 # Introduction
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.6.
-![alt text](Githubsearch.png "Github search image")
+
+<p align="center">
+  <a href="https://githubsearch-93a57.firebaseapp.com" target="_blank">
+    <img src="Githubsearch.PNG" alt="Github search App" />
+  </a>
+</p>
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
