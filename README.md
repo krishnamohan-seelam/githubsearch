@@ -1,6 +1,7 @@
 # Introduction
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.6.
+Simple angular app built using github api,bootstrap 4. check out this app hosted on  firebase  <a href="https://githubsearch-93a57.firebaseapp.com" target="_blank"> here</a>
 
 <p align="center">
   <a href="https://githubsearch-93a57.firebaseapp.com" target="_blank">
